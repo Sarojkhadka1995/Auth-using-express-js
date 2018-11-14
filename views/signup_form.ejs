@@ -1,0 +1,65 @@
+<html>
+  <head>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!------ Include the above in your HEAD tag ---------->
+  </head>
+<body id="LoginForm">
+<div class="container">
+<h1 class="form-heading">Signup Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+
+   <p>Please enter your detail</p>
+   </div>
+   <div>
+   	<% if (success == 'false'){ %> 
+    <%=errors.length%><!-- 
+     <% for (var i = 0; i < errors.length; i++) {%>
+      <%=errors[i].msg%>
+     <%}%> -->
+        
+    <% } else { %>
+
+    <% } %>
+    	<!-- <%= typeof errors !== 'undefined' ? errors : '' %>  -->
+    
+   	<div>
+
+    <form action="signup" method="post" id="signup">
+        <div class="form-group">
+            <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Email Address">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="name" id="inputUname" placeholder="User name">
+        </div>
+
+        <div class="form-group">
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+
+            <input type="password" class="form-control" name="cfpassword" id="inputCpassword" placeholder="Confirm password">
+
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary">Signup</button>
+        </div>
+        
+    </form>
+    <div>
+        <a href="login"><button type="submit" class="btn btn-info">Log in</button></a>
+        </div>
+    </div>
+
+</div></div></div>
+
+
+</body>
+</html>
